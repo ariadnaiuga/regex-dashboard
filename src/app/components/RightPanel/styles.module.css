@@ -1,0 +1,22 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--padding);
+}
+
+.textarea {
+  width: 100%;
+  height: 90%;
+  padding: var(--padding-md);
+  border-color: var(--light-grey);
+  background-color: var(--white);
+  color: var(--foreground);
+  text-align: justify;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
