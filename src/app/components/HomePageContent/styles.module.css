@@ -1,0 +1,8 @@
+.container {
+  padding: var(--padding-md);
+  height: 100%;
+}
+
+.grid {
+  background-color: var(--white);
+}
