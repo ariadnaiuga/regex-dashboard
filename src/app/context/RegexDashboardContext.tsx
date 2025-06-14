@@ -13,6 +13,8 @@ import { DATA } from "./data";
 type RegexDashboardContextType = {
   regExpressions: RegExpInterface[];
   setRegExpressions: (value: RegExpInterface[]) => void;
+  text: string;
+  setText: (value: string) => void;
 };
 
 const RegexDashboardContext = createContext<
@@ -25,6 +27,7 @@ export const RegexDashboardProvider = ({
   children: ReactNode;
 }) => {
   const [regExpressions, setRegExpressions] = useState<RegExpInterface[]>([]);
+  const [text, setText] = useState<string>("");
 
   useEffect(() => {
     const storedRegex = localStorage.getItem("regExpressions");
@@ -44,6 +47,8 @@ export const RegexDashboardProvider = ({
       value={{
         regExpressions,
         setRegExpressions,
+        text,
+        setText,
       }}
     >
       {children}
