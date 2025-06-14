@@ -1,0 +1,16 @@
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  max-height: 60vh;
+  overflow: auto;
+  gap: var(--gap);
+}
+
+.listItemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-sm) var(--padding-md);
+  border: 1px solid var(--light-grey);
+  border-radius: 5px;
+}

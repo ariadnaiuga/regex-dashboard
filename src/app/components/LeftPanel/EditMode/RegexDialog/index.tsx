@@ -8,7 +8,6 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import { DialogType } from "@/app/types";
 import { RegexForm } from "../RegexForm";
-import styles from "./styles.module.css";
 import { useState } from "react";
 
 interface RegexDialogProps {
@@ -45,12 +44,17 @@ export const RegexDialog: React.FC<RegexDialogProps> = ({
       aria-labelledby="regex-dialog-title"
       open={open}
       fullWidth
+      keepMounted={false}
     >
       <DialogTitle>{dialogTitle}</DialogTitle>
       <IconButton
         aria-label="close regex dialog"
         onClick={handleClose}
-        className={styles.iconButton}
+        sx={{
+          position: "absolute",
+          right: 8,
+          top: 8,
+        }}
       >
         <CloseIcon />
       </IconButton>

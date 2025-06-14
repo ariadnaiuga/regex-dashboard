@@ -3,10 +3,12 @@ import { RegExpInterface } from "../types";
 export const DATA: RegExpInterface[] = [
   {
     description: "Get all 4-letter words",
-    pattern: "\\b\\w{4}\\b",
+    pattern: "/\bw{4}\b/g",
+    approved: true,
   },
   {
     description: "Get all 6-letter words",
-    pattern: "\\b\\w{6}\\b",
+    pattern: "/\bw{6}\b/g",
+    approved: false,
   },
 ];
