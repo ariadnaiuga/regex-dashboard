@@ -1,12 +1,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --white: #ffffff;
+
+  --headerHeight: 50px;
+  --footerHeight: 45px;
+  --padding: 15px;
+  --padding-md: 20px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f0f0f0;
+    --foreground: #171717;
   }
 }
 
@@ -14,6 +20,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  height: 100vh;
 }
 
 body {
@@ -22,6 +29,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 * {
@@ -33,6 +44,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+main {
+  height: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
