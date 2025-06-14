@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import LeftPanel from "../LeftPanel";
+import { LeftPanel } from "../LeftPanel";
 import RightPanel from "../RightPanel";
 import styles from "./styles.module.css";
 
