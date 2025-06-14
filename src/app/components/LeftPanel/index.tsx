@@ -1,7 +1,43 @@
-import React from "react";
+"use client";
 
-export const Leftpanel = () => {
-  return <></>;
+import React, { useState } from "react";
+import { Mode } from "@/app/types";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import { EditMode } from "./EditMode";
+import { ApprovalMode } from "./ApprovalMode";
+
+export const LeftPanel = () => {
+  const [mode, setMode] = useState<Mode>("edit");
+
+  const handleToggleMode = (
+    event: React.MouseEvent<HTMLElement>,
+    newMode: Mode
+  ) => {
+    setMode(newMode);
+  };
+
+  return (
+    <>
+      <ToggleButtonGroup
+        value={mode}
+        exclusive
+        onChange={handleToggleMode}
+        aria-label="toggle mode"
+        fullWidth
+      >
+        <ToggleButton value="edit" aria-label="edit mode" color="primary">
+          Edit Mode
+        </ToggleButton>
+        <ToggleButton
+          value="approval"
+          aria-label="approval mode"
+          color="primary"
+        >
+          Approval Mode
+        </ToggleButton>
+      </ToggleButtonGroup>
+      {mode === "edit" ? <EditMode /> : <ApprovalMode />}
+    </>
+  );
 };
-
-export default Leftpanel;
