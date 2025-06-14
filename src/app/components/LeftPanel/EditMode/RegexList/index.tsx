@@ -4,6 +4,7 @@ import { useRegexDashboardContext } from "@/app/context/RegexDashboardContext";
 import { RegexListItem } from "./RegexListItem";
 import { RegexDialog } from "../RegexDialog";
 import styles from "./styles.module.css";
+import { CustomAlert } from "@/app/components/shared/CustomAlert";
 
 export const RegexList = () => {
   const { regExpressions, setRegExpressions } = useRegexDashboardContext();
@@ -58,7 +59,9 @@ export const RegexList = () => {
           />
         </Box>
       ))}
-
+      {regExpressions.length === 0 && (
+        <CustomAlert message="There are no regular expressions available." />
+      )}
       <RegexDialog
         description={newDescription}
         pattern={newPattern}

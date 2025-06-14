@@ -15,6 +15,7 @@ export const AddRegex = () => {
     const newRegex: RegExpInterface = {
       description: newDescription,
       pattern: newPattern,
+      approved: false,
     };
     setRegExpressions([...regExpressions, newRegex]);
   };

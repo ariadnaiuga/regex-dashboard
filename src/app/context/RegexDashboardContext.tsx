@@ -8,7 +8,6 @@ import React, {
   useEffect,
 } from "react";
 import { RegExpInterface } from "../types";
-import { DATA } from "./data";
 
 type RegexDashboardContextType = {
   regExpressions: RegExpInterface[];
@@ -33,8 +32,6 @@ export const RegexDashboardProvider = ({
     const storedRegex = localStorage.getItem("regExpressions");
     if (storedRegex) {
       setRegExpressions(JSON.parse(storedRegex));
-    } else {
-      localStorage.setItem("regExpressions", JSON.stringify(DATA));
     }
   }, []);
 
