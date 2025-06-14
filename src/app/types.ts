@@ -4,3 +4,5 @@ export interface RegExpInterface {
 }
 
 export type Mode = "edit" | "approval";
+
+export type DialogType = "edit" | "add";

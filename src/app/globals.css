@@ -2,11 +2,14 @@
   --background: #ffffff;
   --foreground: #171717;
   --white: #ffffff;
-
+  --light-grey: #d5d1d1;
   --headerHeight: 50px;
   --footerHeight: 45px;
   --padding: 15px;
   --padding-md: 20px;
+  --padding-sm: 5px;
+  --gap: 10px;
+  --gap-md: 15px;
 }
 
 @media (prefers-color-scheme: dark) {

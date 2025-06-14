@@ -6,6 +6,8 @@ import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { EditMode } from "./EditMode";
 import { ApprovalMode } from "./ApprovalMode";
+import Box from "@mui/material/Box";
+import styles from "./styles.module.css";
 
 export const LeftPanel = () => {
   const [mode, setMode] = useState<Mode>("edit");
@@ -18,7 +20,7 @@ export const LeftPanel = () => {
   };
 
   return (
-    <>
+    <Box className={styles.container}>
       <ToggleButtonGroup
         value={mode}
         exclusive
@@ -38,6 +40,6 @@ export const LeftPanel = () => {
         </ToggleButton>
       </ToggleButtonGroup>
       {mode === "edit" ? <EditMode /> : <ApprovalMode />}
-    </>
+    </Box>
   );
 };

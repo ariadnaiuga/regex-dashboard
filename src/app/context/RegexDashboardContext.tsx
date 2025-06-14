@@ -35,6 +35,10 @@ export const RegexDashboardProvider = ({
     }
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("regExpressions", JSON.stringify(regExpressions));
+  }, [regExpressions]);
+
   return (
     <RegexDashboardContext.Provider
       value={{
