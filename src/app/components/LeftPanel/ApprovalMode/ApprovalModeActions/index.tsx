@@ -16,21 +16,11 @@ export const ApprovalModeActions: React.FC<ApprovalModeActionsProps> = ({
   return (
     <Box className={styles.container}>
       {isApproved ? (
-        <Button
-          variant="contained"
-          // className={styles.button}
-          onClick={handleDecline}
-          color="error"
-        >
+        <Button variant="contained" onClick={handleDecline} color="error">
           Decline
         </Button>
       ) : (
-        <Button
-          color="success"
-          variant="contained"
-          // className={styles.button}
-          onClick={handleApprove}
-        >
+        <Button color="success" variant="contained" onClick={handleApprove}>
           Approve
         </Button>
       )}

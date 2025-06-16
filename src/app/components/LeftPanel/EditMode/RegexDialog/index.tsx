@@ -48,7 +48,7 @@ export const RegexDialog: React.FC<RegexDialogProps> = ({
     >
       <DialogTitle>{dialogTitle}</DialogTitle>
       <IconButton
-        aria-label="close regex dialog"
+        aria-label="close regex form dialog"
         onClick={handleClose}
         sx={{
           position: "absolute",

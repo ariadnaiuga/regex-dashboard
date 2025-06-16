@@ -23,10 +23,18 @@ export const RegexListItem: React.FC<RegexListItemProps> = ({
     <Box className={styles.listItemContainer}>
       <Typography variant="body1">{description}</Typography>
       <Box>
-        <IconButton onClick={handleEdit} color="primary">
+        <IconButton
+          onClick={handleEdit}
+          color="primary"
+          aria-label="edit regex"
+        >
           <EditIcon />
         </IconButton>
-        <IconButton onClick={handleDelete} color="error">
+        <IconButton
+          onClick={handleDelete}
+          color="error"
+          aria-label="delete regex"
+        >
           <DeleteIcon />
         </IconButton>
       </Box>
