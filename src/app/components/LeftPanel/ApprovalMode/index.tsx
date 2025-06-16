@@ -59,7 +59,7 @@ export const ApprovalMode = () => {
   }, [text, selectedRegex]);
 
   return (
-    <Box className={styles.container}>
+    <Box className={styles.container} data-testid="approval-mode">
       <Box className={styles.formContainer}>
         <FormControl fullWidth>
           <InputLabel id="relect-regex-label">Select regex</InputLabel>

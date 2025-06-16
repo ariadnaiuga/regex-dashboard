@@ -28,13 +28,19 @@ export const LeftPanel = () => {
         aria-label="toggle mode"
         fullWidth
       >
-        <ToggleButton value="edit" aria-label="edit mode" color="primary">
+        <ToggleButton
+          value="edit"
+          aria-label="edit mode"
+          color="primary"
+          data-testid="edit-mode-button"
+        >
           Edit Mode
         </ToggleButton>
         <ToggleButton
           value="approval"
           aria-label="approval mode"
           color="primary"
+          data-testid="approval-mode-button"
         >
           Approval Mode
         </ToggleButton>

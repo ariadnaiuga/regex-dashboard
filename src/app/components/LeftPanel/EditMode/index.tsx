@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 
 export const EditMode = () => {
   return (
-    <Box className={styles.container}>
+    <Box className={styles.container} data-testid="edit-mode">
       <RegexList />
       <AddRegex />
     </Box>
