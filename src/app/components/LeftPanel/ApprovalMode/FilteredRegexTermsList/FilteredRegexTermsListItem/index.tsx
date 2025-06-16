@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Box, Chip, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import styles from "../styles.module.css";
 
 interface RegexListItemProps {
@@ -15,10 +15,9 @@ export const FilteredRegexTermsListItem: React.FC<RegexListItemProps> = ({
   return (
     <Box className={styles.listItemContainer}>
       <Typography>{term}</Typography>
-      <Chip
-        label={approved ? "Approved" : "Not approved"}
-        color={approved ? "success" : "default"}
-      />
+      <Typography color={approved ? "success" : "default"}>
+        {approved ? "Approved" : "Not approved"}
+      </Typography>
     </Box>
   );
 };
